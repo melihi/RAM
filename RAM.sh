@@ -22,7 +22,8 @@ trap ctrl_c 2
 ctrl_c(){
      
     printf "\n$RED Keyboard Interrupt detected, killing processes...\n $GREEN https://github.com/melihi $RESET"
-    
+    pkill thread.sh
+    pkill thread.sh
     exitf
 }
 parseurl(){
@@ -53,9 +54,6 @@ parseurl(){
 #}
 exitf(){
     
-    
-    pkill thread.sh
-    pkill thread.sh
     sleep 10
     pid=$(pidof -x thread.sh)
     if [ ${#pid} == "0" ] 
@@ -63,8 +61,7 @@ exitf(){
     printf "$GREEN Finished \n $RESET"
     exit
     else 
-    printf "$GREEN Killing threads ... \n $RESET"
-    pkill thread.sh
+    printf "$GREEN Waiting threads ... \n $RESET"
     exitf
     fi
    
