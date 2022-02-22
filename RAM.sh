@@ -61,7 +61,7 @@ exitf(){
     printf "$GREEN Finished \n $RESET"
     exit
     else 
-    printf "$GREEN Waiting threads ... \n $RESET"
+    printf "$GREEN Waiting threads ...\n $RESET"
     exitf
     fi
    
