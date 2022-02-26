@@ -9,7 +9,7 @@
   * Reads urls from file
   
   
-  
+ **Useage : https://github.com/melihi/RAM/wiki/Download-&-Usage**
   
   
   
